@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await fetch("http://localhost:4001/api/tasks");
+        const response = await fetch("https://todo-list-97xk.onrender.com/api/tasks");
         const data = await response.json();
         setTasks(data);
       } catch (error) {
@@ -30,7 +30,7 @@ const Home = () => {
   // Task add function
   const handleAddTask = async (taskData) => {
     try {
-      const response = await fetch("http://localhost:4001/api/tasks", {
+      const response = await fetch("https://todo-list-97xk.onrender.com/api/tasks", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(taskData),
@@ -49,7 +49,7 @@ const Home = () => {
   //  Task update 
   const handleEditTask = async (updatedTask) => {
     try {
-      const response = await fetch(`http://localhost:4001/api/tasks/${updatedTask._id}`, {
+      const response = await fetch(`https://todo-list-97xk.onrender.com/api/tasks/${updatedTask._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedTask),
@@ -69,7 +69,7 @@ const Home = () => {
   //  Task delete 
   const handleDeleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:4001/api/tasks/${taskId}`, {
+      const response = await fetch(`https://todo-list-97xk.onrender.com/api/tasks/${taskId}`, {
         method: "DELETE",
       });
 
