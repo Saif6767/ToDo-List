@@ -1,7 +1,7 @@
 [build]
   base = "."   # Specify root directory if the project is at the root of the repository
   command = "npm run build"   # Production build command
-  publish = "dist"            # Output directory for the production build (Vite)
+  publish = "Frontend/dist"           # Output directory for the production build (Vite)
 
 [dev]
   command = "npm run dev"     # Development server command
