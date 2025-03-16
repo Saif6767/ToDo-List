@@ -1,6 +1,6 @@
 export const loginUser = async (email, password) => {
     try {
-        const response = await fetch("http://localhost:4001/api/auth/login", {
+        const response = await fetch("https://todo-list-97xk.onrender.com/api/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),
