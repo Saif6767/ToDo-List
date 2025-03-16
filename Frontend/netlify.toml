@@ -1,13 +1,9 @@
 [build]
-  base = "."   # Specify root directory if the project is at the root of the repository
+  base = "Frontend"   # Yeh specify karega ki Netlify Frontend folder me jaye
   command = "npm run build"   # Production build command
-  publish = "Frontend/dist"           # Output directory for the production build (Vite)
-
-[dev]
-  command = "npm run dev"     # Development server command
+  publish = "Frontend/dist"   # Vite ke output folder ko deploy kare
 
 [[redirects]]
-  from = "/"
+  from = "/*"
   to = "/index.html"
   status = 200
-  force = true
